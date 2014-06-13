@@ -3,10 +3,9 @@ var itemBody;
 
 $(document).ready(function(){
 	$('#addButton').click(function(){
-		itemText = $(this).closest('#add').find('#addText').text();
+		itemText = $(this).closest('#add').find('#addText').val();
 		constructItem(itemText);
-		
-
+		$(itemBody).appendTo($('#itemList'));
 	});
 });
 
