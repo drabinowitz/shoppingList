@@ -15,4 +15,4 @@ function deleteItem(event){
 
 		itemToDelete.remove();
 
-	}
+}
