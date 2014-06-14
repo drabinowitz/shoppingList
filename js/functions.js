@@ -1,10 +1,12 @@
 function addItem(){
 
-	itemText = $(this).closest('#add').find('#addText').val();
+	$('<li class="itemCounter"></li><div class="itemBody"><button name="delete" class="delete">X</button><p class="itemText">'
 
-	itemBody = '<li class="itemCounter"></li><div class="itemBody"><button name="delete" class="delete">X</button><p class="itemText">' + itemText + '</p><input type="checkbox" name="itemCheck" value="itemCheck"></div>';
+	 + $(this).closest('#add').find('#addText').val() + 
 
-	$(itemBody).appendTo($('#itemList'));
+	'</p><input type="checkbox" name="itemCheck" value="itemCheck"></div>')
+
+	.appendTo($('#itemList'));
 
 }
 
@@ -22,9 +24,15 @@ function editItem(event){
 
 	textToEdit = $(event.target);
 
-	itemText = textToEdit.text();
+	textToEdit.replaceWith(
 
-	textToEdit.replaceWith($('<input type="text" class="editText" value="' + itemText + '">'));
+		$('<input type="text" class="editText" value="' 
+		
+		+ textToEdit.text() + 
+
+		'">')
+
+	);
 
 	$('.editText').focus();
 
