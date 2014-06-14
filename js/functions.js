@@ -17,3 +17,15 @@ function deleteItem(event){
 	itemToDelete.remove();
 
 }
+
+function editItem(event){
+
+	textToEdit = $(event.target);
+
+	itemText = textToEdit.text();
+
+	textToEdit.replaceWith($('<input type="text" class="editText" value="' + itemText + '">'));
+
+	$('.editText').focus();
+
+}
