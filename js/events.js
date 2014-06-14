@@ -1,20 +1,11 @@
 var itemText;
 var itemBody;
+var itemToDelete;
 
 $(document).ready(function(){
 
-	$('#add').on('click','#addButton',function(){
+	$('#add').on('click','#addButton',addItem);
 
-		itemText = $(this).closest('#add').find('#addText').val();
-		
-		addItem(itemText);
-
-	});
-
-	$('#itemList').on('click','.delete',function(event){
-
-		$(event.target).closest('.itemBody').remove();
-
-	});
+	$('#itemList').on('click','.delete',deleteItem);
 
 });
