@@ -6,6 +6,8 @@ $(document).ready(function(){
 
 			if ( event.which == 13 ) {
 
+				event.preventDefault();
+
 				addItem.call($( this ));
 
 			}
@@ -16,6 +18,16 @@ $(document).ready(function(){
 
 		.on('click','.delete',deleteItem)
 
-		.on('click','.itemText',editItem);
+		.on('click','.itemText',editItem)
+
+		.on('click','.editButton',function(event){
+
+			if ( $( event.target ).prev().hasClass("itemText") ){
+
+				editItem.call($( '.itemText' ),event)
+
+			}
+
+		});
 
 });

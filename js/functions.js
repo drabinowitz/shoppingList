@@ -4,7 +4,7 @@ function addItem(){
 
 	 + $(this).closest('#add').find('#addText').val() + 
 
-	'</p><input type="checkbox" name="itemCheck" value="itemCheck"></div></li>')
+	'</p><button name="editButton" class="editButton">Edit</button><input type="checkbox" name="itemCheck" value="itemCheck"></div></li>')
 
 	.appendTo($('#itemList'));
 
@@ -18,7 +18,7 @@ function deleteItem(event){
 
 function editItem(event){
 
-	textToEdit = $(event.target);
+	textToEdit = $( event.target ).closest('.itemBody').find('.itemText');
 
 	textToEdit.replaceWith(
 
