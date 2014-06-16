@@ -1,2 +1,1 @@
-var itemToDelete;
 var textToEdit;

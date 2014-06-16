@@ -1,10 +1,10 @@
 function addItem(){
 
-	$('<li class="itemCounter"></li><div class="itemBody"><button name="delete" class="delete">X</button><p class="itemText">'
+	$('<li class="itemCounter"><div class="itemBody"><button name="delete" class="delete">X</button><p class="itemText">'
 
 	 + $(this).closest('#add').find('#addText').val() + 
 
-	'</p><input type="checkbox" name="itemCheck" value="itemCheck"></div>')
+	'</p><input type="checkbox" name="itemCheck" value="itemCheck"></div></li>')
 
 	.appendTo($('#itemList'));
 
@@ -12,11 +12,7 @@ function addItem(){
 
 function deleteItem(event){
 
-	itemToDelete = $(event.target).closest('.itemBody');
-
-	itemToDelete.prev().remove();
-
-	itemToDelete.remove();
+	$(event.target).closest('.itemCounter').remove();
 
 }
 
