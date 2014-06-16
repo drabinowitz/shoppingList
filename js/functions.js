@@ -10,7 +10,7 @@ function addItem(){
 
 	$('.itemCounter:last-of-type').css('opacity');
 
-	$('.itemCounter:last-of-type').toggleClass('addItem');
+	$('.itemCounter:last-of-type').addClass('addItem');
 
 	$( '#addText' ).select();
 
@@ -24,7 +24,7 @@ function deleteItem(event){
 
 	})
 
-	.toggleClass('addItem');
+	.removeClass('addItem');
 
 }
 
