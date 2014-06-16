@@ -34,3 +34,18 @@ function editItem(event){
 
 }
 
+function editConfirm(event){
+
+	editText = $( event.target ).closest('.itemBody').find('.editText');
+
+	editText.replaceWith(
+
+		$('<p class="itemText">'
+
+	 	+ editText.val() + 
+
+		'</p>')
+
+	);
+
+}
