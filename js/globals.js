@@ -1,1 +1,1 @@
-var textToEdit;
+var editText;

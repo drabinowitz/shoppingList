@@ -18,13 +18,13 @@ function deleteItem(event){
 
 function editItem(event){
 
-	textToEdit = $( event.target ).closest('.itemBody').find('.itemText');
+	editText = $( event.target ).closest('.itemBody').find('.itemText');
 
-	textToEdit.replaceWith(
+	editText.replaceWith(
 
 		$('<input type="text" class="editText" value="' 
 		
-		+ textToEdit.text() + 
+		+ editText.text() + 
 
 		'">')
 
@@ -33,3 +33,4 @@ function editItem(event){
 	$('.editText').focus();
 
 }
+
