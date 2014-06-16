@@ -50,6 +50,12 @@ $(document).ready(function(){
 
 			}
 
+		})
+
+		.on('blur','.editText',function (event) {
+
+			alert( $( event.target ).closest('.itemBody').find('.editButton').is(':active') );
+
 		});
 
 });
