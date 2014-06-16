@@ -4,7 +4,7 @@ function addItem(){
 
 	 + $(this).closest('#add').find('#addText').val() + 
 
-	'</p><button name="editButton" class="editButton">Edit</button><input type="checkbox" name="itemCheck" value="itemCheck"></div></li>')
+	'</p><input type="checkbox" name="itemCheck" value="itemCheck"></div></li>')
 
 	.appendTo($('#itemList'));
 
@@ -18,13 +18,11 @@ function deleteItem(event){
 
 function editItem(event){
 
-	editText = $( event.target ).closest('.itemBody').find('.itemText');
-
-	editText.replaceWith(
+	$( event.target ).replaceWith(
 
 		$('<input type="text" class="editText" value="' 
 		
-		+ editText.text() + 
+		+ $( event.target ).text() + 
 
 		'">')
 
@@ -36,27 +34,11 @@ function editItem(event){
 
 function editConfirm(event){
 
-	editText = $( event.target ).closest('.itemBody').find('.editText');
-
-	editText.replaceWith(
-
-		$('<p class="itemText">'
-
-	 	+ editText.val() + 
-
-		'</p>')
-
-	);
-
-}
-
-function editRevert(event){
-
 	$( event.target ).replaceWith(
 
 		$('<p class="itemText">'
 
-	 	+ editText.text() + 
+	 	+ $( event.target ).val() + 
 
 		'</p>')
 
