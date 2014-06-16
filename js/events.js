@@ -42,6 +42,12 @@ $(document).ready(function(){
 
 				editConfirm.call($( this ),event);
 
+			} else if (event.which == 27) {
+
+				event.preventDefault();
+
+				editRevert.call($( this ),event);
+
 			}
 
 		});
