@@ -42,19 +42,13 @@ $(document).ready(function(){
 
 				editConfirm.call($( this ),event);
 
-			} else if (event.which == 27) {
+			} else if (event.which == 27 || event.which == 9) {
 
 				event.preventDefault();
 
 				editRevert.call($( this ),event);
 
 			}
-
-		})
-
-		.on('blur','.editText',function (event) {
-
-			alert( $( event.target ).closest('.itemBody').find('.editButton').is(':active') );
 
 		});
 
