@@ -30,7 +30,7 @@ function editItem(event){
 
 	);
 
-	$('.editText').focus();
+	$( event.target ).closest('.itemBody').find('.editText').focus();
 
 }
 
