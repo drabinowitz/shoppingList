@@ -49,3 +49,17 @@ function editConfirm(event){
 	);
 
 }
+
+function editRevert(event){
+
+	$( event.target ).replaceWith(
+
+		$('<p class="itemText">'
+
+	 	+ editText.text() + 
+
+		'</p>')
+
+	);
+
+}

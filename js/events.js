@@ -20,15 +20,15 @@ $(document).ready(function(){
 
 		.on('click','.itemText',editItem)
 
-		.on('click','.editButton',function(event){
+		.on('click','.editButton',function (event) {
 
 			if ( $( event.target ).prev().hasClass("itemText") ){
 
-				editItem.call($( '.itemText' ),event)
+				editItem.call($( '.itemText' ),event);
 
 			} else if ( $( event.target ).prev().hasClass("editText") ){
 
-				editConfirm.call($( '.editText' ),event)
+				editConfirm.call($( '.editText' ),event);
 
 			}
 
