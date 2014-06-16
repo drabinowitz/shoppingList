@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('#addText').focus();
+
 	$('#add').on('click','#addButton',addItem)
 
 		.on('keyup','#addText',function (event) {

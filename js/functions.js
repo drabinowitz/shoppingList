@@ -8,6 +8,8 @@ function addItem(){
 
 	.appendTo($('#itemList'));
 
+	$( '#addText' ).select();
+
 }
 
 function deleteItem(event){
