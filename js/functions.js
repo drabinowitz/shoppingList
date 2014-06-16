@@ -8,13 +8,23 @@ function addItem(){
 
 	.appendTo($('#itemList'));
 
+	$('.itemCounter:last-of-type').css('opacity');
+
+	$('.itemCounter:last-of-type').toggleClass('addItem');
+
 	$( '#addText' ).select();
 
 }
 
 function deleteItem(event){
 
-	$(event.target).closest('.itemCounter').remove();
+	$(event.target).closest('.itemCounter').bind('webkitTransitionEnd', function(){
+
+		$( this ).remove();
+
+	})
+
+	.toggleClass('addItem');
 
 }
 
