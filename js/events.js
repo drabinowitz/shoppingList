@@ -26,11 +26,15 @@ $(document).ready(function(){
 
 				editItem.call($( '.itemText' ),event)
 
+			} else if ( $( event.target ).prev().hasClass("editText") ){
+
+				editConfirm.call($( '.editText' ),event)
+
 			}
 
 		})
 
-		.on('keyup','.editText',function (event) {
+		.on('keydown','.editText',function (event) {
 
 			if ( event.which == 13 ) {
 
