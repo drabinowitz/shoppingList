@@ -57,11 +57,13 @@ function editItem(event){
 
 	$( event.target ).replaceWith(
 
-		$('<input type="text" class="editText" value="' 
-		
-		+ $( event.target ).text() + 
+		$('<input>').attr({
 
-		'">')
+			type:"text",
+			class:"editText",
+			value:$( event.target ).text()
+
+		})
 
 	);
 
@@ -73,11 +75,11 @@ function editConfirm(event){
 
 	$( event.target ).replaceWith(
 
-		$('<p class="itemText">'
+		$('<p>').attr('class','itemText').append(
 
-	 	+ $( event.target ).val() + 
+			$( event.target ).val()
 
-		'</p>')
+		)
 
 	);
 
