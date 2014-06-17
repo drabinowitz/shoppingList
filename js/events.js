@@ -18,17 +18,29 @@ $(document).ready(function(){
 
 	$('#itemList').sortable({
 
-		'start':function (event,ui){
+		/*'start':function (event,ui){
 
 			$( ui.item ).removeClass('afterAddItem');
 
+		},*/
+
+		'start':function (event,ui){
+
+			removeAddItemClass.call( $( ui.item ) );
+
 		},
 
-		'stop':function (event,ui){
+		/*'stop':function (event,ui){
 
 			$( ui.item ).addClass('afterAddItem')
 
 				.removeAttr('style');
+
+		}*/
+
+		'stop':function (event,ui){
+
+			addAddItemClass.call( $( ui.item ) );
 
 		}
 

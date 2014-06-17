@@ -84,3 +84,17 @@ function editConfirm(event){
 	);
 
 }
+
+function removeAddItemClass(){
+
+	$( this ).removeClass('afterAddItem');
+
+}
+
+function addAddItemClass(){
+
+	$( this ).addClass('afterAddItem')
+
+		.removeAttr('style');
+
+}
