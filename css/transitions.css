@@ -1,3 +1,7 @@
-.addItem {
-	opacity: 1;
+.beforeAddItem {
+	opacity: 0;
+}
+
+.afterAddItem {
+	-webkit-transition: opacity 2s;
 }

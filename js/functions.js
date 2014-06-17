@@ -33,9 +33,9 @@ function addItem(){
 
 	)));
 
-	$('.itemCounter:last-of-type').css('opacity');
+	$('.itemCounter:last-of-type').addClass('beforeAddItem').css('opacity');
 
-	$('.itemCounter:last-of-type').addClass('addItem');
+	$('.itemCounter:last-of-type').addClass('afterAddItem').removeClass('beforeAddItem');
 
 	$( '#addText' ).select();
 
@@ -49,7 +49,7 @@ function deleteItem(event){
 
 	})
 
-	.removeClass('addItem');
+	.addClass('beforeAddItem');
 
 }
 
