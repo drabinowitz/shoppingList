@@ -1,12 +1,37 @@
 function addItem(){
 
-	$('<li class="itemCounter"><div class="itemBody"><button name="delete" class="delete">X</button><p class="itemText">'
+	$('#itemList').append(
 
-	 + $(this).closest('#add').find('#addText').val() + 
+		$('<li>').attr('class','itemCounter').append(
 
-	'</p><input type="checkbox" name="itemCheck" value="itemCheck"></div></li>')
+			$('<div>').attr('class','itemBody').append(
 
-	.appendTo($('#itemList'));
+				$('<button>').attr({
+
+					name: "delete",
+					class: "delete"
+
+				}).append("X")
+
+			).append(
+
+				$('<p>').attr('class','itemText').append(
+
+					$(this).closest('#add').find('#addText').val()
+
+				)
+
+			).append(
+
+				$('<input>').attr({
+
+					type: "checkbox",
+					name: "itemCheck",
+					value: "itemCheck"
+
+				})
+
+	)));
 
 	$('.itemCounter:last-of-type').css('opacity');
 
