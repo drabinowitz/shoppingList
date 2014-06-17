@@ -16,7 +16,23 @@ $(document).ready(function(){
 
 		});
 
-	$('#itemList').sortable()
+	$('#itemList').sortable({
+
+		'start':function (event,ui){
+
+			$( ui.item ).removeClass('afterAddItem');
+
+		},
+
+		'stop':function (event,ui){
+
+			$( ui.item ).addClass('afterAddItem')
+
+				.removeAttr('style');
+
+		}
+
+	})
 
 		.on('click','.delete',deleteItem)
 
