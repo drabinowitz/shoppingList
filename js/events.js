@@ -30,6 +30,12 @@ $(document).ready(function(){
 
 		},
 
+		'change':function (event,ui){
+
+			smoothChange.call( $( ui.item ) );
+
+		},
+
 		'placeholder':'marker'
 
 	})

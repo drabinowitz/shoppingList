@@ -97,6 +97,12 @@ function unSmoothClass(){
 
 		.removeAttr('style')
 
-		.siblings().andSelf().removeClass('marginTop');
+		.siblings().andSelf().removeClass('marginTransition');
+
+}
+
+function smoothChange(){
+
+	$( this ).siblings().andSelf().addClass('marginTransition');
 
 }
