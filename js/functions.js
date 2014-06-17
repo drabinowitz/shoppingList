@@ -85,16 +85,18 @@ function editConfirm(event){
 
 }
 
-function removeAddItemClass(){
+function smoothClass(){
 
 	$( this ).removeClass('afterAddItem');
 
 }
 
-function addAddItemClass(){
+function unSmoothClass(){
 
 	$( this ).addClass('afterAddItem')
 
-		.removeAttr('style');
+		.removeAttr('style')
+
+		.siblings().andSelf().removeClass('marginTop');
 
 }
