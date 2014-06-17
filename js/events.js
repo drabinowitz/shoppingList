@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 		})
 
-		.on('keydown','.editText',function (event) {
+		.on('keyup','.editText',function (event) {
 
 			if ( event.which == 13 ) {
 

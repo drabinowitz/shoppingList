@@ -1,6 +1,6 @@
 function addItem(){
 
-	$('#itemList').append(
+	$( '#itemList' ).append(
 
 		$('<li>').attr('class','itemCounter').append(
 
@@ -43,7 +43,7 @@ function addItem(){
 
 function deleteItem(event){
 
-	$(event.target).closest('.itemCounter').bind('webkitTransitionEnd', function(){
+	$( event.target ).closest('.itemCounter').bind('webkitTransitionEnd', function(){
 
 		$( this ).remove();
 

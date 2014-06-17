@@ -1,7 +1,10 @@
-.beforeAddItem {
-	opacity: 0;
+.afterAddItem {
+	opacity: 1;
+	top:0;
+	-webkit-transition: opacity 2s, top 2s;
 }
 
-.afterAddItem {
-	-webkit-transition: opacity 2s;
+.beforeAddItem {
+	opacity: 0;
+	top:-10px;
 }
