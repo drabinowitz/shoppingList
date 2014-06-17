@@ -4,27 +4,37 @@ function addItem(){
 
 	 + $(this).closest('#add').find('#addText').val() + 
 
-	'</p><button name="editButton" class="editButton">Edit</button><input type="checkbox" name="itemCheck" value="itemCheck"></div></li>')
+	'</p><input type="checkbox" name="itemCheck" value="itemCheck"></div></li>')
 
 	.appendTo($('#itemList'));
+
+	$('.itemCounter:last-of-type').css('opacity');
+
+	$('.itemCounter:last-of-type').addClass('addItem');
+
+	$( '#addText' ).select();
 
 }
 
 function deleteItem(event){
 
-	$(event.target).closest('.itemCounter').remove();
+	$(event.target).closest('.itemCounter').bind('webkitTransitionEnd', function(){
+
+		$( this ).remove();
+
+	})
+
+	.removeClass('addItem');
 
 }
 
 function editItem(event){
 
-	editText = $( event.target ).closest('.itemBody').find('.itemText');
-
-	editText.replaceWith(
+	$( event.target ).replaceWith(
 
 		$('<input type="text" class="editText" value="' 
 		
-		+ editText.text() + 
+		+ $( event.target ).text() + 
 
 		'">')
 
@@ -36,27 +46,11 @@ function editItem(event){
 
 function editConfirm(event){
 
-	editText = $( event.target ).closest('.itemBody').find('.editText');
-
-	editText.replaceWith(
-
-		$('<p class="itemText">'
-
-	 	+ editText.val() + 
-
-		'</p>')
-
-	);
-
-}
-
-function editRevert(event){
-
 	$( event.target ).replaceWith(
 
 		$('<p class="itemText">'
 
-	 	+ editText.text() + 
+	 	+ $( event.target ).val() + 
 
 		'</p>')
 

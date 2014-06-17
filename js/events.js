@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('#addText').focus();
+
 	$('#add').on('click','#addButton',addItem)
 
 		.on('keyup','#addText',function (event) {
@@ -10,7 +12,7 @@ $(document).ready(function(){
 
 				addItem.call($( this ));
 
-			}
+			};
 
 		});
 
@@ -20,17 +22,9 @@ $(document).ready(function(){
 
 		.on('click','.itemText',editItem)
 
-		.on('click','.editButton',function (event) {
+		.on('blur','.editText',function (event) {
 
-			if ( $( event.target ).prev().hasClass("itemText") ){
-
-				editItem.call($( '.itemText' ),event);
-
-			} else if ( $( event.target ).prev().hasClass("editText") ){
-
-				editConfirm.call($( '.editText' ),event);
-
-			}
+				editConfirm.call($( this ),event);
 
 		})
 
@@ -40,15 +34,9 @@ $(document).ready(function(){
 
 				event.preventDefault();
 
-				editConfirm.call($( this ),event);
+				$( event.target ).blur();
 
-			} else if (event.which == 27 || event.which == 9) {
-
-				event.preventDefault();
-
-				editRevert.call($( this ),event);
-
-			}
+			};
 
 		});
 
