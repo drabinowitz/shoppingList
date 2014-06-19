@@ -2,7 +2,7 @@
 	opacity: 1;
 	height:61px;
 	top:0;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	-webkit-transition: opacity 0.5s, top 0.5s, height 0.5s, margin-bottom 0.5s;
 }
 
@@ -14,11 +14,11 @@
 }
 
 .marker+.ui-sortable-helper+li {
-	margin-top: 71px;
+	margin-top: 66px;
 }
 
 .marker+li:not(.ui-sortable-helper) {
-	margin-top: 71px;
+	margin-top: 66px;
 }
 
 .marginTransition{
