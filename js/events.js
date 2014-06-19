@@ -44,11 +44,7 @@ $(document).ready(function(){
 
 		.on('click','.itemText',editItem)
 
-		.on('blur','.editText',function (event) {
-
-				editConfirm.call($( this ),event);
-
-		})
+		.on('blur','.editText',editConfirm)
 
 		.on('keyup','.editText',function (event) {
 
