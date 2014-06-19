@@ -1,10 +1,46 @@
-/* .itemCounter {
-	-webkit-transition: opacity 2s;
-	position: relative;
-	opacity: 0;
-} */
+.add h1{
+	margin: 10px auto;
+	font-size: 40px;
+	text-align: center;
+	color: rgba(0, 20, 124, 0.88);
+	font-weight: bold;
+}
+
+.add {
+	border-bottom: 5px solid rgba(153, 170, 192, 1);
+	background: -webkit-linear-gradient(rgba(220, 231, 233, 1),rgba(174, 188, 190, 1));
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	height: 160px;
+	-webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.31);
+}
+
+.addText{
+	margin: 21px auto 18px auto;
+	display: block;
+	width: 300px;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.6);
+}
+
+.addButton {
+	margin: 0 auto;
+	display: block;
+	border-radius: 10px;
+	border: 0;
+	color: #fff;
+	background: -webkit-linear-gradient(rgb(111, 165, 223),rgb(62, 93, 150));
+	padding: 4px 9px;
+}
 
 @media (min-width: 768px) { .container { max-width: 750px; } }
+
+.container{
+	margin-top:175px;
+}
 
 .itemCounter{
 	position: relative;
