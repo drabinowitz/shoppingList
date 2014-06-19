@@ -1,6 +1,6 @@
 function addItem(){
 
-	$( '#itemList' ).append(
+	$( '.itemList' ).append(
 
 		$('<li>').attr('class','itemCounter').append(
 
@@ -17,7 +17,7 @@ function addItem(){
 
 				$('<p>').attr('class','itemText').append(
 
-					$(this).closest('#add').find('#addText').val()
+					$(this).closest('.add').find('.addText').val()
 
 				)
 
@@ -37,7 +37,7 @@ function addItem(){
 
 	$('.itemCounter:last-of-type').addClass('afterAddItem').removeClass('beforeAddItem');
 
-	$( '#addText' ).select();
+	$( '.addText' ).select();
 
 }
 

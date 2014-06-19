@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-	$('#addText').focus();
+	$('.addText').focus();
 
-	$('#add').on('click','#addButton',addItem)
+	$('.add').on('click','.addButton',addItem)
 
-		.on('keyup','#addText',function (event) {
+		.on('keyup','.addText',function (event) {
 
 			if ( event.which == 13 ) {
 
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 		});
 
-	$('#itemList').sortable({
+	$('.itemList').sortable({
 
 		'start':function (event,ui){
 
