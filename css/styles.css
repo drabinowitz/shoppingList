@@ -16,7 +16,7 @@
 
 .itemCounter * {
 	color: #fff;
-	font-size: 24px;
+	font-size: 28px;
 }
 
 .itemBody > *{
@@ -26,8 +26,38 @@
 .delete{
 	background: none;
 	border: none;
+	height: 29px;
+	float: left;
+}
+
+.delete:focus{
+	border:none;
+	outline: none;
+}
+
+.delete:active{
+	outline:none;
 }
 
 .delete img{
-	height: 24px;
+	height: 27px;
+}
+
+.delete img:active{
+	-webkit-filter: saturate(500%);
+}
+
+.itemText {
+	width: 75%;
+	margin-left: 3%;
+	float: left;
+}
+
+.itemText:hover{
+	cursor: pointer;
+}
+
+.itemCheck{
+	margin-right: 2%;
+	float: right;
 }
