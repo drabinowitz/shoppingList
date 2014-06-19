@@ -12,6 +12,20 @@
 	border-radius: 10px;
 }
 
+.itemCounter * {
+	color: #fff;
+	font-size: 24px;
+}
+
 .itemBody > *{
 	display: inline-block;
+}
+
+.delete{
+	background: none;
+	border: none;
+}
+
+.delete img{
+	height: 24px;
 }
