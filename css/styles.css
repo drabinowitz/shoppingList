@@ -111,3 +111,18 @@ input[type=checkbox].itemCheck{
 	height: 30px;
 	width: 30px;
 }
+
+.errorBar{
+	position: fixed;
+	z-index: 100;
+	display: none;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 80px;
+	background: rgb(255, 40, 40);
+	text-align: center;
+	color: white;
+	padding-top: 30px;
+	font-size: 20px;
+}

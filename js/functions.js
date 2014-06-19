@@ -1,49 +1,60 @@
 function addItem(){
 
-	$( '.itemList' ).append(
+	if ($(this).closest('.add').find('.addText').val()){
 
-		$('<li>').attr('class','itemCounter col-md-12 col-xs-12').append(
+		$( '.itemList' ).append(
 
-			$('<div>').attr('class','itemBody').append(
+			$('<li>').attr('class','itemCounter col-md-12 col-xs-12').append(
 
-				$('<button>').attr({
+				$('<div>').attr('class','itemBody').append(
 
-					name: "delete",
-					class: "delete"
+					$('<button>').attr({
 
-				}).append(
+						name: "delete",
+						class: "delete"
 
-					$('<img>').attr('src','images/deleteIcon.png')
+					}).append(
 
-				)
+						$('<img>').attr('src','images/deleteIcon.png')
 
-			).append(
+					)
 
-				$('<p>').attr('class','itemText').append(
+				).append(
 
-					$(this).closest('.add').find('.addText').val()
+					$('<p>').attr('class','itemText').append(
 
-				)
+						$(this).closest('.add').find('.addText').val()
 
-			).append(
+					)
 
-				$('<input>').attr({
+				).append(
 
-					type: "checkbox",
-					name: "itemCheck",
-					value: "itemCheck",
-					class: "itemCheck"
+					$('<input>').attr({
 
-				})
+						type: "checkbox",
+						name: "itemCheck",
+						value: "itemCheck",
+						class: "itemCheck"
 
-	)));
+					})
 
-	$('.itemCounter:last-of-type').addClass('beforeAddItem').css('opacity');
+		)));
 
-	$('.itemCounter:last-of-type').addClass('afterAddItem').removeClass('beforeAddItem');
+		$('.itemCounter:last-of-type').addClass('beforeAddItem').css('opacity');
 
-	$( '.addText' ).select();
+		$('.itemCounter:last-of-type').addClass('afterAddItem').removeClass('beforeAddItem');
 
+		$( '.addText' ).select();
+	
+	} else {
+
+		$('.errorBar').slideDown(500,function(){
+
+			$( this ).delay(3000).fadeOut(1000);
+
+		});
+
+	}
 }
 
 function deleteItem(event){
