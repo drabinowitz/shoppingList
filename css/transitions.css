@@ -4,7 +4,7 @@
 	top:0;
 	left: 0;
 	margin-bottom: 5px;
-	-webkit-transition: opacity 0.5s, top 0.5s, height 0.5s, margin-bottom 0.5s, left 0.5s;
+	-webkit-transition: opacity 0.5s, top 0.5s, height 0.5s, margin-bottom 0.5s, left 0.5s, background-color 0.5s;
 }
 
 .beforeAddItem {
@@ -27,6 +27,6 @@
 }
 
 .checkedItem{
-	background: green;
+	background: rgb(70, 180, 70);
 	left: 30px;
 }
