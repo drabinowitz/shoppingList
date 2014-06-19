@@ -7,8 +7,7 @@
 }
 
 .add {
-	border-bottom: 5px solid rgba(153, 170, 192, 1);
-	background: -webkit-linear-gradient(rgba(220, 231, 233, 1),rgba(174, 188, 190, 1));
+	background: -webkit-linear-gradient(rgba(255, 255, 255, 1),rgba(212, 224, 226, 1));
 	position: fixed;
 	top: 0;
 	left: 0;
