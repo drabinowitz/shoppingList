@@ -4,6 +4,8 @@
 	opacity: 0;
 } */
 
+@media (min-width: 768px) { .container { max-width: 750px; } }
+
 .itemCounter{
 	position: relative;
 	background-color: rgba(89, 100, 228, 1);
