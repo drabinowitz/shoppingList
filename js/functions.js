@@ -27,7 +27,8 @@ function addItem(){
 
 					type: "checkbox",
 					name: "itemCheck",
-					value: "itemCheck"
+					value: "itemCheck",
+					class: "itemCheck"
 
 				})
 
@@ -104,5 +105,11 @@ function unSmoothClass(){
 function smoothChange(){
 
 	$( this ).siblings().andSelf().addClass('marginTransition');
+
+}
+
+function checkItem(){
+
+	$( event.target ).closest('.itemCounter').toggleClass('checkedItem');
 
 }

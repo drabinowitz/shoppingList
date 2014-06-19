@@ -2,8 +2,9 @@
 	opacity: 1;
 	height:61px;
 	top:0;
+	left: 0;
 	margin-bottom: 5px;
-	-webkit-transition: opacity 0.5s, top 0.5s, height 0.5s, margin-bottom 0.5s;
+	-webkit-transition: opacity 0.5s, top 0.5s, height 0.5s, margin-bottom 0.5s, left 0.5s;
 }
 
 .beforeAddItem {
@@ -23,4 +24,9 @@
 
 .marginTransition{
 	-webkit-transition: margin-top 0.2s;
+}
+
+.checkedItem{
+	background: green;
+	left: 30px;
 }

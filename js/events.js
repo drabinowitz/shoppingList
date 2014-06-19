@@ -60,6 +60,8 @@ $(document).ready(function(){
 
 			};
 
-		});
+		})
+
+		.on('change','.itemCheck',checkItem);
 
 });
