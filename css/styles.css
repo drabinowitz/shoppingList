@@ -26,7 +26,7 @@
 .delete{
 	background: none;
 	border: none;
-	height: 29px;
+	height: 34px;
 	float: left;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .delete img{
-	height: 27px;
+	height: 32px;
 }
 
 .delete img:active{
@@ -57,7 +57,10 @@
 	cursor: pointer;
 }
 
-.itemCheck{
-	margin-right: 2%;
+input[type=checkbox].itemCheck{
+	margin: 1px 2% 0 0;
 	float: right;
+	color: green;
+	height: 30px;
+	width: 30px;
 }
