@@ -2,21 +2,23 @@
 	opacity: 1;
 	height:61px;
 	top:0;
-	-webkit-transition: opacity 0.5s, top 0.5s, height 0.5s;
+	margin-bottom: 10px;
+	-webkit-transition: opacity 0.5s, top 0.5s, height 0.5s, margin-bottom 0.5s;
 }
 
 .beforeAddItem {
 	opacity: 0;
 	height:0;
 	top:-10px;
+	margin-bottom: 0;
 }
 
 .marker+.ui-sortable-helper+li {
-	margin-top: 61px;
+	margin-top: 71px;
 }
 
 .marker+li:not(.ui-sortable-helper) {
-	margin-top: 61px;
+	margin-top: 71px;
 }
 
 .marginTransition{
