@@ -20,13 +20,13 @@ $(document).ready(function(){
 
 		'start':function (event,ui){
 
-			smoothClass.call( $( ui.item ) );
+			smoothClass.call( $( ui.item ),event );
 
 		},
 
 		'stop':function (event,ui){
 
-			unSmoothClass.call( $( ui.item ) );
+			smoothClass.call( $( ui.item ),event );
 
 		},
 

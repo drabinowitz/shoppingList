@@ -11,7 +11,11 @@ function addItem(){
 					name: "delete",
 					class: "delete"
 
-				}).append("X")
+				}).append(
+
+					$('<img>').attr('src','images/deleteIcon.png')
+
+				)
 
 			).append(
 
@@ -86,19 +90,17 @@ function editConfirm(event){
 
 }
 
-function smoothClass(){
+function smoothClass(event){
 
-	$( this ).removeClass('afterAddItem');
+	$( this ).toggleClass('afterAddItem');
 
-}
+	if ( event.type == "sortstop"){
 
-function unSmoothClass(){
+		$( this ).removeAttr('style')
 
-	$( this ).addClass('afterAddItem')
+			.siblings().andSelf().removeClass('marginTransition');
 
-		.removeAttr('style')
-
-		.siblings().andSelf().removeClass('marginTransition');
+	}
 
 }
 
