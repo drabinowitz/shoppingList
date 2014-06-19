@@ -36,6 +36,10 @@
 	padding: 4px 9px;
 }
 
+.addButton:active{
+	background: -webkit-linear-gradient(rgb(62, 93, 150),rgb(111, 165, 223));
+}
+
 @media (min-width: 768px) { .container { max-width: 750px; } }
 
 .container{
@@ -66,12 +70,12 @@
 	float: left;
 }
 
-.delete:focus{
+button:focus{
 	border:none;
 	outline: none;
 }
 
-.delete:active{
+button:active{
 	outline:none;
 }
 
