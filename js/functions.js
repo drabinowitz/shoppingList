@@ -2,7 +2,7 @@ function addItem(){
 
 	$( '.itemList' ).append(
 
-		$('<li>').attr('class','itemCounter col-md-6 col-md-offset-3').append(
+		$('<li>').attr('class','itemCounter col-md-12').append(
 
 			$('<div>').attr('class','itemBody').append(
 
