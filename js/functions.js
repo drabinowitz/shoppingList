@@ -50,11 +50,7 @@ function addItem(){
 	
 	} else {
 
-		$('.errorBar').slideDown(500,function(){
-
-			$( this ).delay(3000).fadeOut(1000);
-
-		});
+		$('.errorBar').slideDown(500).delay(3000).fadeOut(1000);
 
 	}
 }
