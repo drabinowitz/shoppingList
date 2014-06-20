@@ -87,7 +87,7 @@ button:active{
 }
 
 .itemText {
-	width: 75%;
+	width: 60%;
 	margin-left: 3%;
 	float: left;
 }
@@ -97,7 +97,7 @@ button:active{
 }
 
 .editText{
-	width: 75%;
+	width: 60%;
 	margin-left: 3%;
 	color:black;
 	padding-top: 0;
