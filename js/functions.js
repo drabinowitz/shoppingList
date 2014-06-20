@@ -1,6 +1,8 @@
 function addItem(){
 
-	if ($(this).closest('.add').find('.addText').val()){
+	var addValue = $(this).closest('.add').find('.addText').val();
+
+	if ( addValue ){
 
 		$( '.itemList' ).append(
 
@@ -23,7 +25,7 @@ function addItem(){
 
 					$('<p>').attr('class','itemText').append(
 
-						$(this).closest('.add').find('.addText').val()
+						addValue
 
 					)
 
